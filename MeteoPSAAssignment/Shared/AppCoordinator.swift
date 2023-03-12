@@ -15,9 +15,9 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        let instanciated = LocationsListViewController.instantiate()
-        //some init
-        self.navigationController.pushViewController(instanciated, animated: true)
+        let vc = LocationsListViewController.instantiate()
+        vc.viewModel = LocationsListViewModelImplementation()
+        self.navigationController.pushViewController(vc, animated: true)
     }
 
 }

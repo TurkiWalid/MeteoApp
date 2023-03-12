@@ -16,6 +16,9 @@
 		0E40FAEF29BD6E9E00F89019 /* AllLocations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E40FAEE29BD6E9E00F89019 /* AllLocations.storyboard */; };
 		0E40FAF129BD6EF400F89019 /* LocationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40FAF029BD6EF400F89019 /* LocationsListViewController.swift */; };
 		0E40FAF329BD704600F89019 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40FAF229BD704600F89019 /* Storyboarded.swift */; };
+		0E40FAFD29BD780800F89019 /* LocationListItemCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40FAFB29BD780800F89019 /* LocationListItemCellTableViewCell.swift */; };
+		0E40FAFE29BD780800F89019 /* LocationListItemCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E40FAFC29BD780800F89019 /* LocationListItemCellTableViewCell.xib */; };
+		0E40FB0029BD7BF600F89019 /* LocationsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40FAFF29BD7BF600F89019 /* LocationsListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		0E40FAEE29BD6E9E00F89019 /* AllLocations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AllLocations.storyboard; sourceTree = "<group>"; };
 		0E40FAF029BD6EF400F89019 /* LocationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListViewController.swift; sourceTree = "<group>"; };
 		0E40FAF229BD704600F89019 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		0E40FAFB29BD780800F89019 /* LocationListItemCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListItemCellTableViewCell.swift; sourceTree = "<group>"; };
+		0E40FAFC29BD780800F89019 /* LocationListItemCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationListItemCellTableViewCell.xib; sourceTree = "<group>"; };
+		0E40FAFF29BD7BF600F89019 /* LocationsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +70,9 @@
 			children = (
 				0E40FADD29BD6C5000F89019 /* Utilities */,
 				0E40FADE29BD6C7200F89019 /* Models */,
-				0E40FADF29BD6C9300F89019 /* Views */,
-				0E40FAE029BD6C9A00F89019 /* ViewModels */,
+				0E40FAF929BD77B200F89019 /* Scenes */,
 				0E40FAE229BD6D6600F89019 /* Shared */,
+				0E40FB0129BD7DD900F89019 /* Extensions */,
 				0E40FAD229BD6B7D00F89019 /* Assets.xcassets */,
 			);
 			path = MeteoPSAAssignment;
@@ -93,8 +99,9 @@
 		0E40FADF29BD6C9300F89019 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0E40FAE929BD6E2A00F89019 /* LocationsList */,
-				0E40FAE829BD6E1E00F89019 /* SingleLocation */,
+				0E40FAFA29BD77D700F89019 /* Cells */,
+				0E40FAEA29BD6E4600F89019 /* ViewControllers */,
+				0E40FAEB29BD6E4D00F89019 /* Storyboards */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -102,6 +109,7 @@
 		0E40FAE029BD6C9A00F89019 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0E40FAFF29BD7BF600F89019 /* LocationsListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -116,20 +124,20 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		0E40FAE829BD6E1E00F89019 /* SingleLocation */ = {
+		0E40FAE829BD6E1E00F89019 /* LocationCRUD */ = {
 			isa = PBXGroup;
 			children = (
-				0E40FAEC29BD6E5C00F89019 /* ViewControllers */,
-				0E40FAED29BD6E6200F89019 /* Storyboards */,
+				0E40FAF829BD77A900F89019 /* ViewModels */,
+				0E40FAF729BD779700F89019 /* Views */,
 			);
-			path = SingleLocation;
+			path = LocationCRUD;
 			sourceTree = "<group>";
 		};
 		0E40FAE929BD6E2A00F89019 /* LocationsList */ = {
 			isa = PBXGroup;
 			children = (
-				0E40FAEA29BD6E4600F89019 /* ViewControllers */,
-				0E40FAEB29BD6E4D00F89019 /* Storyboards */,
+				0E40FAE029BD6C9A00F89019 /* ViewModels */,
+				0E40FADF29BD6C9300F89019 /* Views */,
 			);
 			path = LocationsList;
 			sourceTree = "<group>";
@@ -162,6 +170,47 @@
 			children = (
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0E40FAF729BD779700F89019 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0E40FAED29BD6E6200F89019 /* Storyboards */,
+				0E40FAEC29BD6E5C00F89019 /* ViewControllers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0E40FAF829BD77A900F89019 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0E40FAF929BD77B200F89019 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0E40FAE929BD6E2A00F89019 /* LocationsList */,
+				0E40FAE829BD6E1E00F89019 /* LocationCRUD */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		0E40FAFA29BD77D700F89019 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0E40FAFB29BD780800F89019 /* LocationListItemCellTableViewCell.swift */,
+				0E40FAFC29BD780800F89019 /* LocationListItemCellTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0E40FB0129BD7DD900F89019 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E40FAEF29BD6E9E00F89019 /* AllLocations.storyboard in Resources */,
+				0E40FAFE29BD780800F89019 /* LocationListItemCellTableViewCell.xib in Resources */,
 				0E40FAD629BD6B7D00F89019 /* LaunchScreen.storyboard in Resources */,
 				0E40FAD329BD6B7D00F89019 /* Assets.xcassets in Resources */,
 			);
@@ -236,7 +286,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E40FAE429BD6D7D00F89019 /* Coordinator.swift in Sources */,
+				0E40FAFD29BD780800F89019 /* LocationListItemCellTableViewCell.swift in Sources */,
 				0E40FAF129BD6EF400F89019 /* LocationsListViewController.swift in Sources */,
+				0E40FB0029BD7BF600F89019 /* LocationsListViewModel.swift in Sources */,
 				0E40FAE629BD6D9C00F89019 /* AppCoordinator.swift in Sources */,
 				0E40FACA29BD6B7C00F89019 /* AppDelegate.swift in Sources */,
 				0E40FACC29BD6B7C00F89019 /* SceneDelegate.swift in Sources */,
@@ -386,6 +438,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -413,6 +466,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
