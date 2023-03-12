@@ -22,6 +22,12 @@
 		0E40FB0829BD87A800F89019 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E40FB0A29BD87A800F89019 /* Localizable.strings */; };
 		0E40FB0E29BD885B00F89019 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E40FB1029BD885B00F89019 /* InfoPlist.strings */; };
 		0E40FB1329BD894D00F89019 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40FB1229BD894D00F89019 /* DateExtension.swift */; };
+		0E40FB1729BD8CBA00F89019 /* LocationCRUDCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40FB1629BD8CBA00F89019 /* LocationCRUDCoordinator.swift */; };
+		0E40FB1929BD919A00F89019 /* LocationManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E40FB1829BD919A00F89019 /* LocationManagement.storyboard */; };
+		0E40FB1B29BD92B200F89019 /* PickLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40FB1A29BD92B200F89019 /* PickLocationViewController.swift */; };
+		0E40FB1D29BD933600F89019 /* PickLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40FB1C29BD933600F89019 /* PickLocationViewModel.swift */; };
+		0E40FB1F29BD968900F89019 /* DialogUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40FB1E29BD968900F89019 /* DialogUtil.swift */; };
+		0E40FB2129BD9B9B00F89019 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40FB2029BD9B9B00F89019 /* UILabelExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +50,12 @@
 		0E40FB0F29BD885B00F89019 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0E40FB1129BD885D00F89019 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0E40FB1229BD894D00F89019 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		0E40FB1629BD8CBA00F89019 /* LocationCRUDCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCRUDCoordinator.swift; sourceTree = "<group>"; };
+		0E40FB1829BD919A00F89019 /* LocationManagement.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationManagement.storyboard; sourceTree = "<group>"; };
+		0E40FB1A29BD92B200F89019 /* PickLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickLocationViewController.swift; sourceTree = "<group>"; };
+		0E40FB1C29BD933600F89019 /* PickLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickLocationViewModel.swift; sourceTree = "<group>"; };
+		0E40FB1E29BD968900F89019 /* DialogUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogUtil.swift; sourceTree = "<group>"; };
+		0E40FB2029BD9B9B00F89019 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +121,7 @@
 			children = (
 				0E40FAEA29BD6E4600F89019 /* ViewControllers */,
 				0E40FAEB29BD6E4D00F89019 /* Storyboards */,
+				0E40FAFA29BD77D700F89019 /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,17 +141,18 @@
 				0E40FB0229BD843700F89019 /* Coordinators */,
 				0E40FAE329BD6D7D00F89019 /* Coordinator.swift */,
 				0E40FAF229BD704600F89019 /* Storyboarded.swift */,
+				0E40FB1E29BD968900F89019 /* DialogUtil.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		0E40FAE829BD6E1E00F89019 /* LocationCRUD */ = {
+		0E40FAE829BD6E1E00F89019 /* LocationManagement */ = {
 			isa = PBXGroup;
 			children = (
 				0E40FAF829BD77A900F89019 /* ViewModels */,
 				0E40FAF729BD779700F89019 /* Views */,
 			);
-			path = LocationCRUD;
+			path = LocationManagement;
 			sourceTree = "<group>";
 		};
 		0E40FAE929BD6E2A00F89019 /* LocationsList */ = {
@@ -146,7 +160,6 @@
 			children = (
 				0E40FAE029BD6C9A00F89019 /* ViewModels */,
 				0E40FADF29BD6C9300F89019 /* Views */,
-				0E40FAFA29BD77D700F89019 /* Cells */,
 			);
 			path = LocationsList;
 			sourceTree = "<group>";
@@ -170,6 +183,7 @@
 		0E40FAEC29BD6E5C00F89019 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0E40FB1A29BD92B200F89019 /* PickLocationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -177,6 +191,7 @@
 		0E40FAED29BD6E6200F89019 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				0E40FB1829BD919A00F89019 /* LocationManagement.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -184,8 +199,8 @@
 		0E40FAF729BD779700F89019 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0E40FAED29BD6E6200F89019 /* Storyboards */,
 				0E40FAEC29BD6E5C00F89019 /* ViewControllers */,
+				0E40FAED29BD6E6200F89019 /* Storyboards */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,6 +208,7 @@
 		0E40FAF829BD77A900F89019 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0E40FB1C29BD933600F89019 /* PickLocationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -201,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				0E40FAE929BD6E2A00F89019 /* LocationsList */,
-				0E40FAE829BD6E1E00F89019 /* LocationCRUD */,
+				0E40FAE829BD6E1E00F89019 /* LocationManagement */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -219,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				0E40FB1229BD894D00F89019 /* DateExtension.swift */,
+				0E40FB2029BD9B9B00F89019 /* UILabelExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -227,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				0E40FAE529BD6D9C00F89019 /* LocationsListCoordinator.swift */,
+				0E40FB1629BD8CBA00F89019 /* LocationCRUDCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -300,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E40FB0829BD87A800F89019 /* Localizable.strings in Resources */,
+				0E40FB1929BD919A00F89019 /* LocationManagement.storyboard in Resources */,
 				0E40FB0E29BD885B00F89019 /* InfoPlist.strings in Resources */,
 				0E40FAEF29BD6E9E00F89019 /* AllLocations.storyboard in Resources */,
 				0E40FAFE29BD780800F89019 /* LocationListItemCellTableViewCell.xib in Resources */,
@@ -317,12 +336,17 @@
 			files = (
 				0E40FAE429BD6D7D00F89019 /* Coordinator.swift in Sources */,
 				0E40FAFD29BD780800F89019 /* LocationListItemCellTableViewCell.swift in Sources */,
+				0E40FB1D29BD933600F89019 /* PickLocationViewModel.swift in Sources */,
 				0E40FAF129BD6EF400F89019 /* LocationsListViewController.swift in Sources */,
+				0E40FB2129BD9B9B00F89019 /* UILabelExtension.swift in Sources */,
 				0E40FB0029BD7BF600F89019 /* LocationsListViewModel.swift in Sources */,
 				0E40FB1329BD894D00F89019 /* DateExtension.swift in Sources */,
+				0E40FB1729BD8CBA00F89019 /* LocationCRUDCoordinator.swift in Sources */,
 				0E40FAE629BD6D9C00F89019 /* LocationsListCoordinator.swift in Sources */,
 				0E40FACA29BD6B7C00F89019 /* AppDelegate.swift in Sources */,
 				0E40FACC29BD6B7C00F89019 /* SceneDelegate.swift in Sources */,
+				0E40FB1F29BD968900F89019 /* DialogUtil.swift in Sources */,
+				0E40FB1B29BD92B200F89019 /* PickLocationViewController.swift in Sources */,
 				0E40FAF329BD704600F89019 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

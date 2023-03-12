@@ -23,7 +23,8 @@ class LocationsListCoordinator: Coordinator {
     }
     
     func openAddLocation(){
-        
+        let coordinator = LocationManagementCoordinator(navigationController: navigationController)
+        coordinator.pickALocation()
     }
 
 }

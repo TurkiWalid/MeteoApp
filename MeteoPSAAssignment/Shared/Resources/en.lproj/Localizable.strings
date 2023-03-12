@@ -7,3 +7,9 @@
 */
 "Locations" = "Locations";
 "Last_consulted" = "Last consulted";
+"map" = "Map";
+"Pick_a_location" = "Pick a location then confirm";
+"Location_picked" = "Location picked";
+"Do_you_want_to_continue_with_" = "Do you want to continue with %s ?";
+"Cancel" = "Cancel";
+"Continue" = "Continue";

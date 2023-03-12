@@ -50,7 +50,7 @@ class LocationsListViewController: UIViewController, Storyboarded {
     }
     
     @IBAction func addLocation(_ sender: Any) {
-        
+        viewModel?.addLocation()
     }
     
     
