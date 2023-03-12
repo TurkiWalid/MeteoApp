@@ -23,8 +23,12 @@ class LocationsListViewController: UIViewController, Storyboarded {
         setUpTableView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        setupTitles()
+    }
+    
     private func setUpTableView() {
-        locationsTableView.estimatedRowHeight = 110
+        locationsTableView.estimatedRowHeight = 80
         locationsTableView.rowHeight = UITableView.automaticDimension
         
         //For bottom a clean bottom scrolling
@@ -39,6 +43,10 @@ class LocationsListViewController: UIViewController, Storyboarded {
     
     private func setupNavigation() {
         navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    private func setupTitles() {
+        self.title = NSLocalizedString("Locations", comment: "")
     }
     
     @IBAction func addLocation(_ sender: Any) {

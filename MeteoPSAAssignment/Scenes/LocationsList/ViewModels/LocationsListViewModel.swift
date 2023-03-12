@@ -8,16 +8,16 @@
 import UIKit
 
 protocol LocationsListViewModel: UITableViewDataSource, UITableViewDelegate {
+    var coordinator: LocationsListCoordinator? { get set }
     func addLocation()
 }
 
 class LocationsListViewModelImplementation: NSObject, LocationsListViewModel{
+    var coordinator: LocationsListCoordinator?
     
     func addLocation() {
-        //go to add
+        coordinator?.openAddLocation()
     }
-    
-    
     
     //MARK: UITableViewDataSource
     
@@ -27,6 +27,7 @@ class LocationsListViewModelImplementation: NSObject, LocationsListViewModel{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LocationListItemCellTableViewCell.reuseIdentifier) as! LocationListItemCellTableViewCell
+        cell.setup()
         return cell
     }
     

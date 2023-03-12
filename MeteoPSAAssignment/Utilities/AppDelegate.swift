@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         } else {
             let navController = UINavigationController()
-            coordinator = AppCoordinator(navigationController: navController)
-            (coordinator as! AppCoordinator).start()
+            coordinator = LocationsListCoordinator(navigationController: navController)
+            (coordinator as! LocationsListCoordinator).start()
             
             window?.rootViewController = navController
             window?.makeKeyAndVisible()

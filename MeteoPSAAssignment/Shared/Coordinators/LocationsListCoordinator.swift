@@ -1,5 +1,5 @@
 //
-//  AppCoordinator.swift
+//  LocationsListCoordinator.swift
 //  MeteoPSAAssignment
 //
 //  Created by Walid on 12/3/2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AppCoordinator: Coordinator {
+class LocationsListCoordinator: Coordinator {
     var navigationController: UINavigationController
     
     required init(navigationController: UINavigationController) {
@@ -16,8 +16,14 @@ class AppCoordinator: Coordinator {
     
     func start() {
         let vc = LocationsListViewController.instantiate()
-        vc.viewModel = LocationsListViewModelImplementation()
+        let vm = LocationsListViewModelImplementation()
+        vm.coordinator = self
+        vc.viewModel = vm
         self.navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func openAddLocation(){
+        
     }
 
 }
