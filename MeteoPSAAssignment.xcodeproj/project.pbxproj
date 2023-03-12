@@ -33,6 +33,7 @@
 		0E40FB5029BE05DD00F89019 /* LocationWeather+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40FB4E29BE05DD00F89019 /* LocationWeather+CoreDataClass.swift */; };
 		0E40FB5129BE05DD00F89019 /* LocationWeather+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40FB4F29BE05DD00F89019 /* LocationWeather+CoreDataProperties.swift */; };
 		0E40FB5429BE069B00F89019 /* LocationWeatherRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40FB5329BE069B00F89019 /* LocationWeatherRepository.swift */; };
+		0E40FB5729BE4C8600F89019 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40FB5629BE4C8600F89019 /* NetworkHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		0E40FB4E29BE05DD00F89019 /* LocationWeather+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationWeather+CoreDataClass.swift"; sourceTree = "<group>"; };
 		0E40FB4F29BE05DD00F89019 /* LocationWeather+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationWeather+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0E40FB5329BE069B00F89019 /* LocationWeatherRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationWeatherRepository.swift; sourceTree = "<group>"; };
+		0E40FB5629BE4C8600F89019 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 		0E40FAE229BD6D6600F89019 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0E40FB5529BE4C4200F89019 /* Network */,
 				0E40FB5229BE062E00F89019 /* Repositories */,
 				0E40FB4829BE029600F89019 /* Database */,
 				0E40FB0529BD870F00F89019 /* Resources */,
@@ -289,6 +292,14 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
+		0E40FB5529BE4C4200F89019 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0E40FB5629BE4C8600F89019 /* NetworkHelper.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -377,6 +388,7 @@
 				0E40FB0029BD7BF600F89019 /* LocationsListViewModel.swift in Sources */,
 				0E40FB1329BD894D00F89019 /* DateExtension.swift in Sources */,
 				0E40FB5029BE05DD00F89019 /* LocationWeather+CoreDataClass.swift in Sources */,
+				0E40FB5729BE4C8600F89019 /* NetworkHelper.swift in Sources */,
 				0E40FB1729BD8CBA00F89019 /* LocationCRUDCoordinator.swift in Sources */,
 				0E40FAE629BD6D9C00F89019 /* LocationsListCoordinator.swift in Sources */,
 				0E40FACA29BD6B7C00F89019 /* AppDelegate.swift in Sources */,
