@@ -3,8 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>APIKey</key>
-	<string>0da8a961ac6c9829c760de9b1245c36a</string>
+	<string>0749a50c1215972e527371cd7172b958</string>
 	<key>baseUrl</key>
-	<string>https://api.openweathermap.org/data/2.5/onecall</string>
+	<string>https://api.openweathermap.org/data/2.5/weather</string>
 </dict>
 </plist>

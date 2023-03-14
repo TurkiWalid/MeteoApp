@@ -14,12 +14,9 @@ extension LocationWeather {
 
     @NSManaged public var longitude: Double
     @NSManaged public var latitude: Double
-    @NSManaged public var timezoneDescription: String?
-    @NSManaged public var timezoneFromUtc: Int64
+    @NSManaged public var name: String?
     @NSManaged public var temperature: Float
-    @NSManaged public var humidity: Int16
-    @NSManaged public var clouds: Int16
-    @NSManaged public var uvIndex: Float
-    @NSManaged public var windSpeed: Float
+    @NSManaged public var descriptionTitle: String?
+    @NSManaged public var updatedAt: Date?
 
 }

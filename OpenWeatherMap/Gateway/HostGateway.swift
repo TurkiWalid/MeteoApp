@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol HostGateway {
+public protocol HostGateway {
     func getData(url: String, completion: @escaping (Result<Data?, Error>) -> Void)
 }

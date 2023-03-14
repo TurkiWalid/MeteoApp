@@ -15,8 +15,11 @@ class LocationListItemCellTableViewCell: UITableViewCell {
     @IBOutlet weak var temperatureLbl: UILabel!
     @IBOutlet weak var lastConsultedLbl: UILabel!
     
-    func setup() {
-        self.lastConsultedLbl.text = NSLocalizedString("Last_consulted", comment: "") + " " + Date().localizedDateAndTime
+    func setup(locationName: String, temperature: Float, lastConsulted: Date) {
+        locationNameLbl.text = locationName
+        temperatureLbl.text = "\(temperature)"
+        lastConsultedLbl.text = NSLocalizedString("Last_consulted", comment: "") + " " + lastConsulted.localizedDateAndTime
+        
     }
     
     

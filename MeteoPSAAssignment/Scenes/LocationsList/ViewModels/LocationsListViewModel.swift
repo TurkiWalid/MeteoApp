@@ -7,13 +7,26 @@
 
 import UIKit
 
+protocol LocationsListViewControllerDelegate {
+    func reloadTableView()
+}
+
 protocol LocationsListViewModel: UITableViewDataSource, UITableViewDelegate {
     var coordinator: LocationsListCoordinator? { get set }
+    var viewDelegate: LocationsListViewControllerDelegate? { get set }
+    func load()
     func addLocation()
 }
 
 class LocationsListViewModelImplementation: NSObject, LocationsListViewModel{
     var coordinator: LocationsListCoordinator?
+    var locationWeatherList = [LocationWeather]()
+    var viewDelegate: LocationsListViewControllerDelegate?
+    
+    func load(){
+        locationWeatherList = LocationWeatherRepository.selectAllLocations()
+        viewDelegate?.reloadTableView()
+    }
     
     func addLocation() {
         coordinator?.openAddLocation()
@@ -22,12 +35,13 @@ class LocationsListViewModelImplementation: NSObject, LocationsListViewModel{
     //MARK: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        20
+        locationWeatherList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LocationListItemCellTableViewCell.reuseIdentifier) as! LocationListItemCellTableViewCell
-        cell.setup()
+        let item = locationWeatherList[indexPath.row]
+        cell.setup(locationName: item.name ?? "N/A", temperature: item.temperature, lastConsulted: item.updatedAt ?? Date.distantPast)
         return cell
     }
     
@@ -39,8 +53,10 @@ class LocationsListViewModelImplementation: NSObject, LocationsListViewModel{
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            //delete db
+            LocationWeatherRepository.deleteLocation(location: locationWeatherList[indexPath.row])
             //delete row
+            locationWeatherList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     

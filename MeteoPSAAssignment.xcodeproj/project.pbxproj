@@ -45,6 +45,7 @@
 		0E40FB9329BE574200F89019 /* ModuleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40FB9229BE574200F89019 /* ModuleManager.swift */; };
 		0E40FB9529BE575500F89019 /* HostGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40FB9429BE575500F89019 /* HostGateway.swift */; };
 		0E40FB9729BE5AE100F89019 /* Constants.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E40FB9629BE5AE100F89019 /* Constants.plist */; };
+		0E40FB9A29BE6F3900F89019 /* OpenWeatherMapGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40FB9929BE6F3900F89019 /* OpenWeatherMapGateway.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +136,7 @@
 		0E40FB9229BE574200F89019 /* ModuleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleManager.swift; sourceTree = "<group>"; };
 		0E40FB9429BE575500F89019 /* HostGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostGateway.swift; sourceTree = "<group>"; };
 		0E40FB9629BE5AE100F89019 /* Constants.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Constants.plist; sourceTree = "<group>"; };
+		0E40FB9929BE6F3900F89019 /* OpenWeatherMapGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapGateway.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,11 +250,11 @@
 		0E40FAE229BD6D6600F89019 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0E40FB9829BE6F2900F89019 /* Gateways */,
 				0E40FB5529BE4C4200F89019 /* Network */,
 				0E40FB5229BE062E00F89019 /* Repositories */,
 				0E40FB4829BE029600F89019 /* Database */,
 				0E40FB0529BD870F00F89019 /* Resources */,
-				0E40FB0229BD843700F89019 /* Coordinators */,
 				0E40FAE329BD6D7D00F89019 /* Coordinator.swift */,
 				0E40FAF229BD704600F89019 /* Storyboarded.swift */,
 			);
@@ -329,6 +331,7 @@
 		0E40FAF929BD77B200F89019 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0E40FB0229BD843700F89019 /* Coordinators */,
 				0E40FAE929BD6E2A00F89019 /* LocationsList */,
 				0E40FAE829BD6E1E00F89019 /* LocationManagement */,
 			);
@@ -447,6 +450,14 @@
 				0E40FB9229BE574200F89019 /* ModuleManager.swift */,
 			);
 			path = Gateway;
+			sourceTree = "<group>";
+		};
+		0E40FB9829BE6F2900F89019 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				0E40FB9929BE6F3900F89019 /* OpenWeatherMapGateway.swift */,
+			);
+			path = Gateways;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -636,6 +647,7 @@
 				0E40FB5429BE069B00F89019 /* LocationWeatherRepository.swift in Sources */,
 				0E40FB5129BE05DD00F89019 /* LocationWeather+CoreDataProperties.swift in Sources */,
 				0E40FB1D29BD933600F89019 /* PickLocationViewModel.swift in Sources */,
+				0E40FB9A29BE6F3900F89019 /* OpenWeatherMapGateway.swift in Sources */,
 				0E40FB4D29BE05B000F89019 /* Meteo.xcdatamodeld in Sources */,
 				0E40FAF129BD6EF400F89019 /* LocationsListViewController.swift in Sources */,
 				0E40FB2129BD9B9B00F89019 /* UILabelExtension.swift in Sources */,
@@ -959,6 +971,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -991,6 +1004,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

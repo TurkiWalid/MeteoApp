@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LocationsListViewController: UIViewController, Storyboarded {
+class LocationsListViewController: UIViewController, Storyboarded, LocationsListViewControllerDelegate {
     
     static var storyboardName: String {
         return "AllLocations"
@@ -25,6 +25,8 @@ class LocationsListViewController: UIViewController, Storyboarded {
     
     override func viewWillAppear(_ animated: Bool) {
         setupTitles()
+        viewModel?.viewDelegate = self
+        viewModel?.load()
     }
     
     private func setUpTableView() {
@@ -54,5 +56,7 @@ class LocationsListViewController: UIViewController, Storyboarded {
     }
     
     
-    
+    func reloadTableView() {
+        self.locationsTableView.reloadData()
+    }
 }

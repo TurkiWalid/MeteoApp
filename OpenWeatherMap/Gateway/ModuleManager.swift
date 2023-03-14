@@ -11,23 +11,24 @@ enum OpenWeatherMapServiceError: Error {
     case ParametersNotSet
 }
 
-protocol ModuleManager {
+public protocol ModuleManager {
     var networkService: NetworkService {get set}
     func fetchWeather(for request: OpenWeatherMapRequestModel, completion: @escaping (OpenWeatherMapMinimalResponseModel?, String?) -> Void) throws
 }
 
-class ModuleManagerImplementation: ModuleManager {
+public class ModuleManagerImplementation: ModuleManager {
     
-    var networkService: NetworkService
+    public var networkService: NetworkService
     private var configName: String?
     
-    init(gateway: HostGateway, configName: String = "Constants") {
+    public init(gateway: HostGateway, configName: String = "Constants") {
+        self.configName = configName
         self.networkService = NetworkServiceImplementation(gateway: gateway)
     }
     
-    func fetchWeather(for request: OpenWeatherMapRequestModel, completion: @escaping (OpenWeatherMapMinimalResponseModel?, String?) -> Void) throws {
+    public func fetchWeather(for request: OpenWeatherMapRequestModel, completion: @escaping (OpenWeatherMapMinimalResponseModel?, String?) -> Void) throws {
         
-        guard let path = Bundle.main.path(forResource: configName, ofType: "plist"), let properties = NSDictionary(contentsOfFile: path) else {
+        guard let path = Bundle(identifier:"me.walid.OpenWeatherMap")?.path(forResource: configName, ofType: "plist"), let properties = NSDictionary(contentsOfFile: path) else {
             throw OpenWeatherMapServiceError.ParametersNotSet
         }
         

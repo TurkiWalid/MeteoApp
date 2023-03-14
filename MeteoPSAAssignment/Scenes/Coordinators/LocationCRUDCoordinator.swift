@@ -34,7 +34,14 @@ class LocationManagementCoordinator: Coordinator {
             successHandler: success)
     }
     
-    func goToLocationDetails(){
+    func showErrorMessage(message: String){
+        DialogUtil.shared.createAlertDialog(
+            navigationController.viewControllers.last!,
+            title: NSLocalizedString("Oups!", comment: ""),
+            message: message)
+    }
+    
+    func goToLocationDetails(locationWeather : LocationWeather){
         
     }
     

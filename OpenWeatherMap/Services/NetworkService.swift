@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum FetchError: Error {
+public enum FetchError: Error {
     case ParsingError
     case APIError
 }
 
-protocol NetworkService {
+public protocol NetworkService {
     var gateway: HostGateway {get set}
     func fetchWeather(from url: String, completion: @escaping (Result<OpenWeatherMapMinimalResponseModel?, FetchError>) -> Void)
 }
