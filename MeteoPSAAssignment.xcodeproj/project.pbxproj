@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E1F1F6829C13C32004FFE7B /* WeatherPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1F1F6729C13C32004FFE7B /* WeatherPreviewViewController.swift */; };
 		0E40FACA29BD6B7C00F89019 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40FAC929BD6B7C00F89019 /* AppDelegate.swift */; };
 		0E40FACC29BD6B7C00F89019 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40FACB29BD6B7C00F89019 /* SceneDelegate.swift */; };
 		0E40FAD329BD6B7D00F89019 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E40FAD229BD6B7D00F89019 /* Assets.xcassets */; };
@@ -94,6 +95,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E1F1F6729C13C32004FFE7B /* WeatherPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPreviewViewController.swift; sourceTree = "<group>"; };
 		0E40FAC629BD6B7C00F89019 /* MeteoPSAAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeteoPSAAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E40FAC929BD6B7C00F89019 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E40FACB29BD6B7C00F89019 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				0E40FB1A29BD92B200F89019 /* PickLocationViewController.swift */,
+				0E1F1F6729C13C32004FFE7B /* WeatherPreviewViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -661,6 +664,7 @@
 				0E40FACC29BD6B7C00F89019 /* SceneDelegate.swift in Sources */,
 				0E40FB1F29BD968900F89019 /* DialogUtil.swift in Sources */,
 				0E40FB1B29BD92B200F89019 /* PickLocationViewController.swift in Sources */,
+				0E1F1F6829C13C32004FFE7B /* WeatherPreviewViewController.swift in Sources */,
 				0E40FAF329BD704600F89019 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,3 +15,4 @@
 "Continue" = "Continue";
 "weather_provider_issue_please_try_later" = "Weather provider issue please try later.";
 "issue_happened_please_contact_dev" = "Some technical issue happened please contact developer.";
+"weather_details" = "Weather details";

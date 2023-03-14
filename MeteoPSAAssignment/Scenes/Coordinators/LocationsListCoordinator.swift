@@ -15,16 +15,26 @@ class LocationsListCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = LocationsListViewController.instantiate()
-        let vm = LocationsListViewModelImplementation()
-        vm.coordinator = self
-        vc.viewModel = vm
-        self.navigationController.pushViewController(vc, animated: true)
+        DispatchQueue.main.async { [self] in
+            let vc = LocationsListViewController.instantiate()
+            let vm = LocationsListViewModelImplementation()
+            vm.coordinator = self
+            vc.viewModel = vm
+            self.navigationController.pushViewController(vc, animated: true)
+        }
     }
     
     func openAddLocation(){
         let coordinator = LocationManagementCoordinator(navigationController: navigationController)
         coordinator.pickALocation()
+    }
+    
+    func goToLocationDetails(locationWeather : LocationWeather){
+        DispatchQueue.main.async { [self] in
+            let vc = WeatherPreviewViewController.instantiate()
+            vc.locationWeather = locationWeather
+            navigationController.pushViewController(vc, animated: true)
+        }
     }
 
 }

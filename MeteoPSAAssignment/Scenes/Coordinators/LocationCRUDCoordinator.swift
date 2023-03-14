@@ -15,11 +15,13 @@ class LocationManagementCoordinator: Coordinator {
     }
     
     func pickALocation() {
-        let vc = PickLocationViewController.instantiate()
-        let vm = PickLocationViewModelImplementation()
-        vm.coordinator = self
-        vc.viewModel = vm
-        navigationController.pushViewController(vc, animated: true)
+        DispatchQueue.main.async { [self] in
+            let vc = PickLocationViewController.instantiate()
+            let vm = PickLocationViewModelImplementation()
+            vm.coordinator = self
+            vc.viewModel = vm
+            navigationController.pushViewController(vc, animated: true)
+        }
     }
     
     func promptConfirmLocation(locality: String, success: @escaping ()->Void){
@@ -42,7 +44,15 @@ class LocationManagementCoordinator: Coordinator {
     }
     
     func goToLocationDetails(locationWeather : LocationWeather){
-        
+        DispatchQueue.main.async { [self] in
+            let vc = WeatherPreviewViewController.instantiate()
+            vc.locationWeather = locationWeather
+            //replace backstack
+            var viewControllers = navigationController.viewControllers
+            viewControllers.removeLast()
+            navigationController.setViewControllers(viewControllers, animated: true)
+            navigationController.pushViewController(vc, animated: true)
+        }
     }
     
     

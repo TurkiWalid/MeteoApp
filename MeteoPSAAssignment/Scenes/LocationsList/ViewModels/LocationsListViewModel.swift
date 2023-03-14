@@ -48,7 +48,7 @@ class LocationsListViewModelImplementation: NSObject, LocationsListViewModel{
     //MARK: UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //go to details
+        self.coordinator?.goToLocationDetails(locationWeather: locationWeatherList[indexPath.row])
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

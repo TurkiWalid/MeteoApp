@@ -52,7 +52,7 @@ class LocationWeatherRepository {
     static func updateLocation(location: LocationWeather, dataToUpdate: [String: AnyObject]){
         location.updatedAt = Date()
         if let newTemp = dataToUpdate["temperature"] {
-            location.temperature = newTemp as! Float
+            location.temperature = (newTemp as! NSNumber).floatValue
         }
         if let situation = dataToUpdate["descriptionTitle"] {
             location.descriptionTitle = situation as? String

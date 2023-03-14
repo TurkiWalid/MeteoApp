@@ -15,4 +15,5 @@
 "Continue" = "Continuer";
 "weather_provider_issue_please_try_later" = "Problème de fournisseur météo, veuillez réessayer plus tard.";
 "issue_happened_please_contact_dev" = "Un problème technique est survenu, veuillez contacter le développeur.";
+"weather_details" = "Détails météo";
 
