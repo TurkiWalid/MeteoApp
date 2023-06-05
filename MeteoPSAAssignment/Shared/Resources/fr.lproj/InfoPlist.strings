@@ -1,8 +1,0 @@
-/* 
-  InfoPlist.strings
-  MeteoPSAAssignment
-
-  Created by Walid on 12/3/2023.
-  
-*/
-"NSLocationUsageDescription" = "Cette application nécessite votre permission d'utiliser l'emplacement afin de vous localiser";

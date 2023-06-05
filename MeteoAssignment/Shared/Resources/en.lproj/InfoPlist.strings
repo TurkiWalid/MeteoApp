@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  MeteoAssignment
+
+  Created by Walid on 12/3/2023.
+  
+*/
+"NSLocationUsageDescription" = "This application requires your permission to use the location in order to locate you";"
